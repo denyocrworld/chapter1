@@ -17,13 +17,23 @@ void runChapters({
   Chapter1 chapter1 = Chapter1();
   InstanceMirror instanceMirror = reflect(chapter1);
 
+  var correctAnswers = [];
+  var wrongAnswers = [];
   for (var i = 1; i <= 130; i++) {
     var res = instanceMirror.invoke(Symbol("exercise$i"), []).reflectee;
     point += res == true ? 1 : 0;
-    res ? printGreen("Soal nomor $i benar!") : printRed("Soal nomor $i salah!");
+    if (res) correctAnswers.add(i);
+    if (!res) wrongAnswers.add(i);
   }
 
-  print("Point: $point");
+  printGreen("Correct Answers:\n");
+  printGreen("---");
+  printGreen(correctAnswers.join(","));
+  printRed("Wrong Answers:\n");
+  printRed("---");
+  printRed(wrongAnswers.join(","));
+  printGreen("~~~");
+  printGreen("Point: $point");
 
   Dio().post(
     "https://capekngoding.com/magicbook/api/scores",
