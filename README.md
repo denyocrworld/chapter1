@@ -1,2 +1,9 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+## How to run
+```
+dart bin/magicbook_basic.dart
+```
+
+or
+```
+nodemon --exec dart bin/magicbook_basic.dart
+```
