@@ -1,7 +1,7 @@
 class Chapter1 {
   bool? exercise1() {
     //Ubah tipe data variable dibawah ini menjadi String
-    int price = 100;
+    String price = "100";
     return price is String;
   }
 

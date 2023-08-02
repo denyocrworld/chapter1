@@ -1,9 +1,9 @@
 import 'dev/run.dart';
 
 void main(List<String> arguments) {
-  String fullName = "-";
-  String whatsapp = "-";
-  String email = "-";
+  String fullName = "";
+  String whatsapp = "";
+  String email = "";
 
   runChapters(
     fullName: fullName,
