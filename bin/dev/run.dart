@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:mirrors';
 import 'package:dio/dio.dart';
 import '../chapter1.dart';
@@ -8,9 +9,22 @@ void runChapters({
   required String email,
   required String whatsapp,
 }) {
-  if (fullName.isEmpty) printRed("Nama Lengkap wajib di isi");
-  if (whatsapp.isEmpty) printRed("Whatsapp wajib di isi");
-  if (email.isEmpty) printRed("Email wajib di isi");
+  if(fullName.isEmpty||whatsapp.isEmpty||email.isEmpty){
+    printRed("[INFO]");
+    printGreen("""
+Silahkan isi:
+- fullName
+- whatsapp
+- email
+* Utk keperluan leaderboard & scoring
+* Boleh di isi - saja jika keberatan
+(Tapi utk member wajib ya)   
+
+Isi di bin/magicbook_basic.dart
+    """.trim());
+    printRed("---------------");
+    exit(0);
+  }
 
   int point = 0;
 
