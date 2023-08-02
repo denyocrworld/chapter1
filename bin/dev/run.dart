@@ -35,18 +35,22 @@ void runChapters({
   printGreen("~~~");
   printGreen("Point: $point");
 
-  Dio().post(
-    "https://capekngoding.com/magicbook/api/scores",
-    options: Options(
-      headers: {
-        "Content-Type": "application/json",
+  try {
+    Dio().post(
+      "https://capekngoding.com/magicbook/api/scores",
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+        },
+      ),
+      data: {
+        "name": fullName,
+        "email": email,
+        "whatsapp": whatsapp,
+        "point": point,
       },
-    ),
-    data: {
-      "name": fullName,
-      "email": email,
-      "whatsapp": whatsapp,
-      "point": point,
-    },
-  );
+    );
+  } on Exception catch (err) {
+    print("--- 101 ---");
+  }
 }
