@@ -815,27 +815,11 @@ class Chapter1 {
   }
 
   bool? exercise105() {
-    String text = "Dart is awesome";
-    // Implementasikan kode untuk mengubah variable text menjadi list karakter, hasilnya disimpan dalam variable baru.
-    List<String>? output = text.split("");
-    return output ==
-        [
-          "D",
-          "a",
-          "r",
-          "t",
-          " ",
-          "i",
-          "s",
-          " ",
-          "a",
-          "w",
-          "e",
-          "s",
-          "o",
-          "m",
-          "e"
-        ];
+    String text = "Awesome";
+    // Implementasikan kode untuk mengubah variable text menjadi list karakter, 
+    // hasilnya disimpan dalam variable output.
+    List<String>? output = [];
+    return output.join("") == "Awesome";
   }
 
   bool? exercise106() {
