@@ -342,7 +342,9 @@ class Chapter1 {
 
   bool? exercise39() {
     List<int> numbers = [1, 2, 3, 4, 5];
-    // Implementasikan kode untuk menggabungkan semua angka pada List numbers menjadi satu string dengan spasi di antara angka, misalnya "1 2 3 4 5".
+    // Implementasikan kode untuk menggabungkan semua angka pada 
+    // List numbers menjadi satu string dengan spasi di antara angka, 
+    // misalnya "1 2 3 4 5".
     String? output = "";
     return output == "1 2 3 4 5";
   }

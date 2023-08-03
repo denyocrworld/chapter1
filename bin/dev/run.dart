@@ -48,7 +48,7 @@ Isi di bin/magicbook_basic.dart
   printGreen(correctAnswers.join(","));
   printGreen("---");
 
-  printRed("Wrong Answers:\n");
+  printRed("Wrong Answers:");
   printRed(wrongAnswers.join(","));
   printRed("---");
 
