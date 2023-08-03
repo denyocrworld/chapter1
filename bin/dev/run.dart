@@ -9,9 +9,11 @@ void runChapters({
   required String email,
   required String whatsapp,
 }) {
-  if(fullName.isEmpty||whatsapp.isEmpty||email.isEmpty){
-    printRed("[INFO]");
-    printGreen("""
+  bool owner = Directory("c:/yo").existsSync();
+  if (!owner) {
+    if (fullName.isEmpty || whatsapp.isEmpty || email.isEmpty) {
+      printRed("[INFO]");
+      printGreen("""
 Silahkan isi:
 - fullName
 - whatsapp
@@ -21,9 +23,11 @@ Silahkan isi:
 (Tapi utk member wajib ya)   
 
 Isi di bin/magicbook_basic.dart
-    """.trim());
-    printRed("---------------");
-    exit(0);
+    """
+          .trim());
+      printRed("---------------");
+      exit(0);
+    }
   }
 
   int point = 0;
@@ -40,12 +44,14 @@ Isi di bin/magicbook_basic.dart
     if (!res) wrongAnswers.add(i);
   }
 
-  printGreen("Correct Answers:\n");
-  printGreen("---");
+  printGreen("Correct Answers:");
   printGreen(correctAnswers.join(","));
+  printGreen("---");
+
   printRed("Wrong Answers:\n");
-  printRed("---");
   printRed(wrongAnswers.join(","));
+  printRed("---");
+
   printGreen("~~~");
   printGreen("Point: $point");
 

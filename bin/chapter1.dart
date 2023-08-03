@@ -1,7 +1,7 @@
 class Chapter1 {
   bool? exercise1() {
     //Ubah tipe data variable dibawah ini menjadi String
-    String price = "100";
+    int price = 100;
     return price is String;
   }
 
@@ -322,8 +322,8 @@ class Chapter1 {
   bool? exercise36() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengecek apakah semua angka pada List numbers adalah angka genap.
-    bool? output = false;
-    return output;
+    bool? output = true;
+    return output == false;
   }
 
   bool? exercise37() {
@@ -495,7 +495,7 @@ class Chapter1 {
 
   bool? exercise59() {
     String text = "Dart is awesome";
-    // Implementasikan kode untuk mengambil 8 karakter terakhir dari variable text.
+    // Implementasikan kode untuk mengambil 11 karakter terakhir dari variable text.
     String? output = "";
     return output == " is awesome";
   }
@@ -529,7 +529,7 @@ class Chapter1 {
   }
 
   bool? exercise64() {
-    List<int> numbers = [1, 2, 3, 4, 5];
+    List<int> numbers = [33, 22, 13, 14, 15];
     // Implementasikan kode untuk menghitung jumlah angka pada List numbers.
     int? output = -1;
     return output == 5;
@@ -539,7 +539,6 @@ class Chapter1 {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengambil nilai maksimum dari List numbers.
     int? output = -1;
-    numbers.reduce((value, element) => value > element ? value : element);
     return output == 5;
   }
 
@@ -547,7 +546,6 @@ class Chapter1 {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengambil nilai minimum dari List numbers.
     int? output = -1;
-    numbers.reduce((value, element) => value < element ? value : element);
     return output == 1;
   }
 
@@ -588,21 +586,21 @@ class Chapter1 {
     String text = "Dart is awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan spasi, hasilnya disimpan dalam List baru.
     List<String>? output = text.split(" ");
-    return output == ["Dart", "is", "awesome"];
+    return output.toString() == '["Dart", "is", "awesome"]';
   }
 
   bool? exercise73() {
     String text = "Dart-is-awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan tanda "-", hasilnya disimpan dalam List baru.
     List<String>? output = text.split("-");
-    return output == ["Dart", "is", "awesome"];
+    return output.toString() == '["Dart", "is", "awesome"]';
   }
 
   bool? exercise74() {
     String text = "Dart,is,awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan tanda koma (","), hasilnya disimpan dalam List baru.
     List<String>? output = text.split(",");
-    return output == ["Dart", "is", "awesome"];
+    return output.toString() == '["Dart", "is", "awesome"]';
   }
 
   bool? exercise75() {
@@ -813,7 +811,7 @@ class Chapter1 {
     String text = "Dart is awesome";
     // Implementasikan kode untuk mengubah variable text menjadi list kata-kata, hasilnya disimpan dalam variable baru.
     List<String>? output = text.split(" ");
-    return output == ["Dart", "is", "awesome"];
+    return output.toString() == '["Dart", "is", "awesome"]';
   }
 
   bool? exercise105() {
@@ -858,7 +856,8 @@ class Chapter1 {
     // Implementasikan kode untuk menggabungkan dua List menjadi satu, hasilnya disimpan dalam variable baru.
     List<String>? otherFruits = ["orange", "grape"];
     List<String>? output = [...fruits, ...otherFruits];
-    return output == ["apple", "banana", "cherry", "orange", "grape"];
+    return output.toString() ==
+        '["apple", "banana", "cherry", "orange", "grape"]';
   }
 
   bool? exercise109() {
@@ -866,21 +865,22 @@ class Chapter1 {
     // Implementasikan kode untuk menggabungkan dua List menjadi satu, hasilnya disimpan dalam List fruits.
     List<String>? otherFruits = ["orange", "grape"];
     fruits.addAll(otherFruits);
-    return fruits == ["apple", "banana", "cherry", "orange", "grape"];
+    return fruits.toString() ==
+        '["apple", "banana", "cherry", "orange", "grape"]';
   }
 
   bool? exercise110() {
     List<String> fruits = ["apple", "banana", "cherry", "orange", "grape"];
     // Implementasikan kode untuk mengambil dua elemen pertama dari List fruits.
     List<String>? output = fruits.sublist(0, 2);
-    return output == ["apple", "banana"];
+    return output.toString() == '["apple", "banana"]';
   }
 
   bool? exercise111() {
     List<String> fruits = ["apple", "banana", "cherry", "orange", "grape"];
     // Implementasikan kode untuk menghapus dua elemen pertama dari List fruits.
     fruits.removeRange(0, 2);
-    return fruits == ["cherry", "orange", "grape"];
+    return fruits.toString() == '["cherry", "orange", "grape"]';
   }
 
   bool? exercise112() {
@@ -967,40 +967,40 @@ class Chapter1 {
   bool? exercise124() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengubah semua angka pada List numbers menjadi dua kali lipatnya.
-    return numbers == [2, 4, 6, 8, 10];
+    return numbers.toString() == '[2, 4, 6, 8, 10]';
   }
 
   bool? exercise125() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengambil dua elemen terakhir dari List numbers.
     List<int>? output = [];
-    return output == [4, 5];
+    return output.toString() == '[4, 5]';
   }
 
   bool? exercise126() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengambil tiga elemen pertama dari List numbers.
-    List<int>? output = numbers.sublist(0, 3);
-    return output == [1, 2, 3];
+    List<int>? output = [];
+    return output.toString() == '[1, 2, 3]';
   }
 
   bool? exercise127() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengambil tiga elemen terakhir dari List numbers.
     var output = [];
-    return output == [3, 4, 5];
+    return output.toString() == '[3, 4, 5]';
   }
 
   bool? exercise128() {
-    List<int> numbers = [1, 2, 3, 4, 5];
+    List<int> numbers = [5, 3, 2, 1, 4];
     // Implementasikan kode untuk mengurutkan List numbers secara ascending.
-    return numbers == [1, 2, 3, 4, 5];
+    return numbers.toString() == '[1, 2, 3, 4, 5]';
   }
 
   bool? exercise129() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengurutkan List numbers secara descending.
-    return numbers == [5, 4, 3, 2, 1];
+    return numbers.toString() == '[5, 4, 3, 2, 1]';
   }
 
   bool? exercise130() {
@@ -1008,6 +1008,6 @@ class Chapter1 {
     // Implementasikan kode untuk menggabungkan List numbers dengan List numbers lainnya, kemudian mengurutkannya secara ascending.
     List<int>? otherNumbers = [6, 7, 8];
     List<int>? output = [];
-    return output == [1, 2, 3, 4, 5, 6, 7, 8];
+    return output.toString() == '[1, 2, 3, 4, 5, 6, 7, 8]';
   }
 }
