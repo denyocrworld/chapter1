@@ -342,8 +342,8 @@ class Chapter1 {
 
   bool? exercise39() {
     List<int> numbers = [1, 2, 3, 4, 5];
-    // Implementasikan kode untuk menggabungkan semua angka pada 
-    // List numbers menjadi satu string dengan spasi di antara angka, 
+    // Implementasikan kode untuk menggabungkan semua angka pada
+    // List numbers menjadi satu string dengan spasi di antara angka,
     // misalnya "1 2 3 4 5".
     String? output = "";
     return output == "1 2 3 4 5";
@@ -818,7 +818,7 @@ class Chapter1 {
 
   bool? exercise105() {
     String text = "Awesome";
-    // Implementasikan kode untuk mengubah variable text menjadi list karakter, 
+    // Implementasikan kode untuk mengubah variable text menjadi list karakter,
     // hasilnya disimpan dalam variable output.
     List<String>? output = [];
     return output.join("") == "Awesome";
@@ -841,32 +841,28 @@ class Chapter1 {
     List<String> fruits = ["apple", "banana", "cherry"];
     // Implementasikan kode untuk menggabungkan dua List menjadi satu, hasilnya disimpan dalam variable baru.
     List<String>? otherFruits = ["orange", "grape"];
-    List<String>? output = [...fruits, ...otherFruits];
-    return output.toString() ==
-        '["apple", "banana", "cherry", "orange", "grape"]';
+    List<String>? output = [];
+    return output.toString() == '[apple, banana, cherry, orange, grape]';
   }
 
   bool? exercise109() {
     List<String> fruits = ["apple", "banana", "cherry"];
     // Implementasikan kode untuk menggabungkan dua List menjadi satu, hasilnya disimpan dalam List fruits.
     List<String>? otherFruits = ["orange", "grape"];
-    fruits.addAll(otherFruits);
-    return fruits.toString() ==
-        '["apple", "banana", "cherry", "orange", "grape"]';
+    return fruits.toString() == '[apple, banana, cherry, orange, grape]';
   }
 
   bool? exercise110() {
     List<String> fruits = ["apple", "banana", "cherry", "orange", "grape"];
     // Implementasikan kode untuk mengambil dua elemen pertama dari List fruits.
-    List<String>? output = fruits.sublist(0, 2);
-    return output.toString() == '["apple", "banana"]';
+    List<String>? output = [];
+    return output.toString() == '[apple, banana]';
   }
 
   bool? exercise111() {
     List<String> fruits = ["apple", "banana", "cherry", "orange", "grape"];
     // Implementasikan kode untuk menghapus dua elemen pertama dari List fruits.
-    fruits.removeRange(0, 2);
-    return fruits.toString() == '["cherry", "orange", "grape"]';
+    return fruits.toString() == '[cherry, orange, grape]';
   }
 
   bool? exercise112() {
