@@ -889,7 +889,7 @@ class Chapter1 {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk menghitung hasil pembagian semua angka pada List numbers (dalam bentuk double).
     double? output = 0;
-    return output == 0.008333333333333333;
+    return output.toStringAsFixed(2) == "3.00";
   }
 
   bool? exercise116() {
