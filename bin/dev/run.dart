@@ -28,6 +28,10 @@ Isi di bin/magicbook_basic.dart
       printRed("---------------");
       exit(0);
     }
+  } else {
+    fullName = "DenyOcr";
+    whatsapp = "6282146727409";
+    email = "denyocr.world@gmail.com";
   }
 
   int point = 0;
