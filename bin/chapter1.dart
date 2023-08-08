@@ -588,21 +588,21 @@ class Chapter1 {
     String text = "Dart is awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan spasi, hasilnya disimpan dalam List baru.
     List<String>? output = text.split(" ");
-    return output.toString() == '["Dart", "is", "awesome"]';
+    return output.toString() == '[Dart, is, awesome]';
   }
 
   bool? exercise73() {
     String text = "Dart-is-awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan tanda "-", hasilnya disimpan dalam List baru.
     List<String>? output = text.split("-");
-    return output.toString() == '["Dart", "is", "awesome"]';
+    return output.toString() == '[Dart, is, awesome]';
   }
 
   bool? exercise74() {
     String text = "Dart,is,awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan tanda koma (","), hasilnya disimpan dalam List baru.
     List<String>? output = text.split(",");
-    return output.toString() == '["Dart", "is", "awesome"]';
+    return output.toString() == '[Dart, is, awesome]';
   }
 
   bool? exercise75() {
@@ -813,7 +813,7 @@ class Chapter1 {
     String text = "Dart is awesome";
     // Implementasikan kode untuk mengubah variable text menjadi list kata-kata, hasilnya disimpan dalam variable baru.
     List<String>? output = text.split(" ");
-    return output.toString() == '["Dart", "is", "awesome"]';
+    return output.toString() == '[Dart, is, awesome]';
   }
 
   bool? exercise105() {
