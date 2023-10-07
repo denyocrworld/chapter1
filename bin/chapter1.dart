@@ -1,7 +1,7 @@
 class Chapter1 {
   bool? exercise1() {
     //Ubah tipe data variable dibawah ini menjadi String
-    int price = 100;
+    int price = 105;
     return price is String;
   }
 
@@ -124,7 +124,7 @@ class Chapter1 {
   bool exercise12() {
     int input = 10;
     // Tuliskan kode untuk mengurangi 5 pada input
-    int? output;
+    int? output = input;
 
     return output == 5;
   }
@@ -587,21 +587,21 @@ class Chapter1 {
   bool? exercise72() {
     String text = "Dart is awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan spasi, hasilnya disimpan dalam List baru.
-    List<String>? output = text.split(" ");
+    List<String>? output = [];
     return output.toString() == '[Dart, is, awesome]';
   }
 
   bool? exercise73() {
     String text = "Dart-is-awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan tanda "-", hasilnya disimpan dalam List baru.
-    List<String>? output = text.split("-");
+    List<String>? output = [];
     return output.toString() == '[Dart, is, awesome]';
   }
 
   bool? exercise74() {
     String text = "Dart,is,awesome";
     // Implementasikan kode untuk memisahkan kalimat pada variable text berdasarkan tanda koma (","), hasilnya disimpan dalam List baru.
-    List<String>? output = text.split(",");
+    List<String>? output = [];
     return output.toString() == '[Dart, is, awesome]';
   }
 
@@ -812,7 +812,7 @@ class Chapter1 {
   bool? exercise104() {
     String text = "Dart is awesome";
     // Implementasikan kode untuk mengubah variable text menjadi list kata-kata, hasilnya disimpan dalam variable baru.
-    List<String>? output = text.split(" ");
+    List<String>? output = [];
     return output.toString() == '[Dart, is, awesome]';
   }
 
@@ -982,6 +982,7 @@ class Chapter1 {
   bool? exercise129() {
     List<int> numbers = [1, 2, 3, 4, 5];
     // Implementasikan kode untuk mengurutkan List numbers secara descending.
+
     return numbers.toString() == '[5, 4, 3, 2, 1]';
   }
 
